@@ -9,7 +9,7 @@ plugins {
     id 'idea'
 }
 group = 'org.jlab.clara.clas12'
-archivesBaseName = 'clas12clara'
+archivesBaseName = 'clas-clara-engine'
 version = '1.0-SNAPSHOT'
 
 defaultTasks 'build'
@@ -23,6 +23,7 @@ configurations {
     all {
         resolutionStrategy.cacheChangingModulesFor 30, 'minutes'
     }
+    deployerJars
 }
 
 sourceSets {
@@ -34,9 +35,9 @@ sourceSets {
 }
 
 repositories {
-    flatDir {
-        dirs 'lib'
-    }
+//    flatDir {
+//        dirs 'lib'
+//    }
     maven {
         url 'http://clasweb.jlab.org/clas12maven/'
     }
@@ -57,10 +58,11 @@ dependencies {
     compile 'net.sf.jopt-simple:jopt-simple:4.9'
     compile 'com.google.code.findbugs:jsr305:3.0.1'
     compile 'org.jlab.coda:jinflux:1.0-SNAPSHOT'
+    deployerJars 'org.apache.maven.wagon:wagon-ssh-external:2.12'
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-library:1.3'
     testCompile 'org.mockito:mockito-core:1.10.19'
-    compile name: 'clas12detector-dc-1.0-SNAPSHOT'
+//    compile name: 'clas12detector-dc-1.0-SNAPSHOT'
 }
 
 javadoc {
@@ -95,12 +97,16 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: localPublicationRepo)
+            configuration = configurations.deployerJars
+            repository(url: 'scpexe://jlabl1.jlab.org/group/clas/www/clasweb/html/clas12maven') {
+                authentication(userName: 'clas12')
+            }
         }
     }
 }
 
 def deploySpec = copySpec {
-    into ('plugins/clas12/lib/services') {
+    into ('plugins/clas12/lib/clas') {
         from jar.archivePath
     }
 

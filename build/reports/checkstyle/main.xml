@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.0">
-<file name="/Users/gurjyan/Devel/clasclara-engine/src/org/jlab/clara/clas12/dc/monitor/DCRingCallBack.java">
-</file>
-<file name="/Users/gurjyan/Devel/clasclara-engine/src/org/jlab/clara/clas12/dc/monitor/DCRingListener.java">
-</file>
-<file name="/Users/gurjyan/Devel/clasclara-engine/src/org/jlab/clara/clas12/dc/monitor/DcMonitorEngine.java">
-</file>
-<file name="/Users/gurjyan/Devel/clasclara-engine/src/org/jlab/clara/clas12/dc/monitor/TrackingMon.java">
-</file>
-<file name="/Users/gurjyan/Devel/clasclara-engine/src/org/jlab/clara/clas12/dc/reconstruction/VDCHBEngine.java">
-</file>
 <file name="/Users/gurjyan/Devel/clasclara-engine/src/sys/CDRListener.java">
 </file>
 <file name="/Users/gurjyan/Devel/clasclara-engine/src/sys/ClasDataTypes.java">

@@ -18,6 +18,7 @@ public abstract class CDRListener implements EngineReportHandler {
 
     private volatile String dataType;
     private volatile String engineName;
+
     /**
      * Process data off the ring.
      *
@@ -44,10 +45,18 @@ public abstract class CDRListener implements EngineReportHandler {
         return ClaraUtil.buildDataTypes(getExpectedDataType());
     }
 
-    public String getDataType(){
+    /**
+     * Returns the type of the data received.
+     * @return a string with the mime-type
+     */
+    public String getDataType() {
         return dataType;
     }
 
+    /**
+     * returns the engine name that produced the received data.
+     * @return engine name
+     */
     public String getDataAuthor() {
         return engineName;
     }
