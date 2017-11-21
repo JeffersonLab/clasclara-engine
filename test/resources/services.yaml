@@ -14,7 +14,8 @@ services:
 #       name: DCTB
   monitoring:
     chain:
-     - class: org.jlab.clara.clas12.dc.monitor.DcMonitorEngine       name: DCMON
+     - class: org.jlab.clara.clas12.dc.monitor.DcMonitorEngine
+     name: DCMON
 
 mime-types:
   - binary/data-hipo
