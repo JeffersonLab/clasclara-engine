@@ -1,9 +1,9 @@
 io-services:
   reader:
-    class: org.jlab.clas.std.services.convertors.HipoToHipoReader
+    class: org.jlab.org.jlab.clara.clas.std.services.convertors.HipoToHipoReader
     name: HipoToHipoReader
   writer:
-    class: org.jlab.clas.std.services.convertors.HipoToHipoWriter
+    class: org.jlab.org.jlab.clara.clas.std.services.convertors.HipoToHipoWriter
     name: HipoToHipoWriter
 services:
   data-processing:

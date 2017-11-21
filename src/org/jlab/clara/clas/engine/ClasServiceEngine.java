@@ -1,4 +1,4 @@
-package sys;
+package org.jlab.clara.clas.engine;
 
 import org.influxdb.dto.Point;
 import org.jlab.clara.base.ClaraUtil;
@@ -113,7 +113,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: String value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected String getStringConfigParameter(String jsonString,
                                               String key) throws ClasEngineException {
@@ -138,7 +138,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: String value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected String getStringConfigParameter(String jsonString,
                                               String group,
@@ -163,7 +163,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: int value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected int getIntConfigParameter(String jsonString,
                                         String key) throws ClasEngineException {
@@ -184,7 +184,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: int value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected int getIntConfigParameter(String jsonString,
                                         String group,
@@ -205,7 +205,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: double value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected double getDoubleConfigParameter(String jsonString,
                                               String key) throws ClasEngineException {
@@ -231,7 +231,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: double value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected double getDoubleConfigParameter(String jsonString,
                                               String group,
@@ -256,7 +256,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: boolean value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected boolean getBooleanConfigParameter(String jsonString,
                                                 String key) throws ClasEngineException {
@@ -286,7 +286,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: boolean value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected boolean getBooleanConfigParameter(String jsonString,
                                                 String group,
@@ -316,7 +316,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: BigInteger value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected BigInteger getBigIntegerConfigParameter(String jsonString,
                                                       String key) throws ClasEngineException {
@@ -337,7 +337,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: BigInteger value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected BigInteger getBigIntegerConfigParameter(String jsonString,
                                                       String group,
@@ -358,7 +358,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param jsonString JSon configuration object (passed to the userInit method).
      * @param key        the key of the config parameter.
      * @return parameter: BigDecimal value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected BigDecimal getBigDecimalConfigParameter(String jsonString,
                                                       String key) throws ClasEngineException {
@@ -379,7 +379,7 @@ public abstract class ClasServiceEngine implements Engine {
      * @param group      config parameter group.
      * @param key        the key of the config parameter.
      * @return parameter: BigDecimal value
-     * @throws ClasEngineException clas engine exception
+     * @throws ClasEngineException org.jlab.clara.clas engine exception
      */
     protected BigDecimal getBigDecimalConfigParameter(String jsonString,
                                                       String group,

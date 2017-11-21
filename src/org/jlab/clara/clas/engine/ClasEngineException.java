@@ -1,4 +1,4 @@
-package sys;
+package org.jlab.clara.clas.engine;
 
 /**
  * Exception class.

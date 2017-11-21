@@ -9,7 +9,7 @@ plugins {
     id 'idea'
 }
 group = 'org.jlab.clara.clas12'
-archivesBaseName = 'clas-clara-engine'
+archivesBaseName = 'org.jlab.clara.clas-clara-engine'
 version = '1.0-SNAPSHOT'
 
 defaultTasks 'build'
@@ -35,9 +35,6 @@ sourceSets {
 }
 
 repositories {
-//    flatDir {
-//        dirs 'lib'
-//    }
     maven {
         url 'http://clasweb.jlab.org/clas12maven/'
     }
@@ -47,9 +44,7 @@ repositories {
 }
 
 dependencies {
-//    compile 'org.jlab.clas12.detector:clas12detector-dc:1.0-SNAPSHOT'
     compileOnly 'org.jlab.coda:jclara:4.3-SNAPSHOT'
-    compile 'org.jlab.coat:coat-libs:4.0-SNAPSHOT'
     compile 'org.jlab.coda:xmsg:2.3'
     compile 'org.yaml:snakeyaml:1.18'
     compile 'org.json:json:20160810'
@@ -62,7 +57,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-library:1.3'
     testCompile 'org.mockito:mockito-core:1.10.19'
-//    compile name: 'clas12detector-dc-1.0-SNAPSHOT'
 }
 
 javadoc {
@@ -70,7 +64,7 @@ javadoc {
     options.encoding = 'utf8'
     options.docEncoding = 'utf8'
 
-    include "org/jlab/clara/clas12/dc/**"
+    include "org/jlab/clara/clas/engine/**"
 }
 
 task javadocJar(type: Jar) {
@@ -98,7 +92,7 @@ uploadArchives {
         mavenDeployer {
             repository(url: localPublicationRepo)
             configuration = configurations.deployerJars
-            repository(url: 'scpexe://jlabl1.jlab.org/group/clas/www/clasweb/html/clas12maven') {
+            repository(url: 'scpexe://jlabl1.jlab.org/group/org.jlab.clara.clas/www/clasweb/html/clas12maven') {
                 authentication(userName: 'clas12')
             }
         }
@@ -106,7 +100,7 @@ uploadArchives {
 }
 
 def deploySpec = copySpec {
-    into ('plugins/clas12/lib/clas') {
+    into ('plugins/clas12/lib/org.jlab.clara.clas') {
         from jar.archivePath
     }
 

@@ -1,4 +1,4 @@
-package sys;
+package org.jlab.clara.clas.engine;
 
 import org.jlab.clara.base.error.ClaraException;
 import org.jlab.clara.engine.ClaraSerializer;
